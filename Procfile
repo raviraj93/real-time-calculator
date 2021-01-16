@@ -1,1 +1,1 @@
-web: java -jar /tmp/build_eb8a5a02_/target/real-time-calculator-1.0-SNAPSHOT.jar
+web: java -jar build/libs/real-time-calculator-1.0-SNAPSHOT.jar
