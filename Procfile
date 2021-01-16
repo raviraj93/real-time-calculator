@@ -1,0 +1,1 @@
+web: java -jar target/real-time-calculator-1.0-SNAPSHOT.jar
