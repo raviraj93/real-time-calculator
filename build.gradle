@@ -10,8 +10,6 @@ version = '1.0-SNAPSHOT'
 description = 'real-time-calculator'
 sourceCompatibility = '1.8'
 
-apply plugin: 'project-report'
-
 
 repositories {
     mavenCentral()
@@ -31,7 +29,7 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
-    testImplementation 'junit:junit:4.12'
+//    testImplementation 'junit:junit:4.12'
 }
 
 

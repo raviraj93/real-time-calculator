@@ -1,17 +1,18 @@
 package server.strategy.impl;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import server.strategy.CalculationStrategy;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MultiplicationStrategyTest {
 
 
     private CalculationStrategy calculationStrategy;
 
-    @Before
+    @BeforeEach
     public void setup(){
         calculationStrategy = new MultiplicationStrategy();
     }

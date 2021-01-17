@@ -17,7 +17,7 @@ import static java.text.MessageFormat.format;
 public class CalculationController {
 	@MessageMapping("/calculate")
 	@SendTo("/topic/calculation")
-	public CalculationResponse greeting(CalculationRequest message) throws Exception {
+	public CalculationResponse calculate(CalculationRequest message) throws Exception {
         SocketCalculationExecutor server = new SocketCalculationExecutor();
         Logger logger = LoggerFactory.getLogger(CalculationController.class);
         logger.info("Inside CalculatorController :" + message);

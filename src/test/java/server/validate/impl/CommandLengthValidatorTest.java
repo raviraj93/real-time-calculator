@@ -1,17 +1,18 @@
 package server.validate.impl;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import server.exceptions.CalculationException;
 import server.validate.IValidator;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CommandLengthValidatorTest {
 
     private IValidator iValidator;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         iValidator = new CommandLengthValidator();
     }
@@ -27,9 +28,9 @@ public class CommandLengthValidatorTest {
         iValidator.validate(input);
     }
 
-    @Test(expected = CalculationException.class)
+    @Test
     public void shouldThrowExceptionIfCommandLengthDoesNotMatch(){
         String [] input = new String[]{"+", "2", "4","5"};
-        iValidator.validate(input);
+        assertThrows(CalculationException.class, () -> iValidator.validate(input));
     }
 }
