@@ -3,4 +3,3 @@ target
 ./gradle/
 ./.idea/
 *.iml
-gradle/
