@@ -38,6 +38,7 @@ function sendName() {
 
 function showResult(message) {
     $("#greetings").prepend("<tr><td>" + message + "</td></tr>");
+    $("#conversation").find("tr:nth-child(11)").remove();
 }
 
 $(function () {
