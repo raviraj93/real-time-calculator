@@ -13,7 +13,7 @@ How I build it:-
 4. Libraries/Framework: Gradle, SpringBoot and stomp websocket library. 
 
 Hosted On:
-https://serene-earth-00566.herokuapp.com/
+https://raviraj-websocket-calculator.herokuapp.com/
 
 
 How to run in local machine:-

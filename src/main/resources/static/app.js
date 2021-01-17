@@ -19,7 +19,7 @@ function connect() {
         setConnected(true);
         console.log('Connected: ' + frame);
         stompClient.subscribe('/topic/calculation', function (greeting) {
-            showGreeting(JSON.parse(greeting.body).content);
+            showResult(JSON.parse(greeting.body).content);
         });
     });
 }
@@ -36,8 +36,8 @@ function sendName() {
     stompClient.send("/app/calculate", {}, JSON.stringify({'name': $("#name").val()}));
 }
 
-function showGreeting(message) {
-    $("#greetings").append("<tr><td>" + message + "</td></tr>");
+function showResult(message) {
+    $("#greetings").prepend("<tr><td>" + message + "</td></tr>");
 }
 
 $(function () {
